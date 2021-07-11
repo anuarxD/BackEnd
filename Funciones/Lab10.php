@@ -1,3 +1,7 @@
+<?php
+include_once("funciones_externas.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,7 +32,7 @@
     <title>Canasta</title>
 </head>
 
-<body style="font-family: Verdana: font-size: 12px">
+<body >
     <h3>Mi canasta</h3>
     <form action="" name="album" method="post">
         <div class="album">
@@ -79,22 +83,7 @@
         //   echo $cantidad;
     }
 
-    if (isset($_POST["estudiante"]))
-        $estudiante = $_POST["estudiante"];
-    else {
-        $estudiante = 0;
-    }
-
-    if (isset($_POST["cliente"]))
-        $cliente = $_POST["cliente"];
-    else {
-        $cliente = 0;
-    }
-
-    $descuento = $estudiante + $cliente;
-
-
-    //Metodo de Pago
+        //Metodo de Pago
     if (isset($_POST["pago"])) {
 
         switch ($_POST["pago"]) {
@@ -117,8 +106,11 @@
     }
 
     echo "Discos Ordenados: $cantidad";
-    echo "<br>Descuento de: $descuento %";
-    echo "<br> El metodo de pago es: $pago"
+    echo "<br>La funcion descuento(): ". descuento();
+    echo "<br> El metodo de pago es: $pago";
+    $medioDePago = $pago;
+    $costoDeServicio = costoDelServicio($medioDePago);
+    echo "<br>El costo del Servicio es de: $costoDeServicio";
     ?>
 
 
