@@ -32,7 +32,7 @@ include_once("funciones_externas.php");
     <title>Canasta</title>
 </head>
 
-<body >
+<body style="font-family: Verdana; font-size: 12px">
     <h3>Mi canasta</h3>
     <form action="" name="album" method="post">
         <div class="album">

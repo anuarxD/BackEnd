@@ -28,7 +28,7 @@
     <title>Canasta</title>
 </head>
 
-<body style="font-family: Verdana: font-size: 12px">
+<body style="font-family: Verdana; font-size: 12px">
     <h3>Mi canasta</h3>
     <form action="" name="album" method="post">
         <div class="album">
