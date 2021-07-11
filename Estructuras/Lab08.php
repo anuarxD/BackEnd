@@ -80,7 +80,6 @@ $descuento = $estudiante + $cliente;
 
 //Metodo de Pago
 if(isset($_POST["pago"])){
- 
     
     switch ($_POST["pago"]) {
         case "Visa":
