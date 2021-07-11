@@ -110,7 +110,7 @@ include_once("funciones_externas.php");
     echo "<br> El metodo de pago es: $pago";
     $medioDePago = $pago;
     $costoDeServicio = costoDelServicio($medioDePago);
-    echo "<br>El costo del Servicio es de: $costoDeServicio";
+    echo "<br>El costo del Servicio es de: $ $costoDeServicio";
     ?>
 
 
