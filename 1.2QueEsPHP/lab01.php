@@ -15,6 +15,8 @@
         $area = $ancho * $longitud;
         $volumen = $area * $alto;
 
+
+        
         echo "El Area de la figura es: $area <br>
         El volumen de la figura es $volumen"; 
     ?>

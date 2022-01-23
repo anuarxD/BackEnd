@@ -39,7 +39,6 @@
         Cliente: 10% <br>
         <input type="submit" width="300px" name="enviar" value="Ordenar">
         
-
         </div>
     
     </div>

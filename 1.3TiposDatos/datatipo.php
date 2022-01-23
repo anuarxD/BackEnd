@@ -1,6 +1,6 @@
 <?php
-$nombre = "Carlos";
-$direccion = "Calle Enrique Barocio 1117";
+$nombre = "Anuar";
+$direccion = "Calle Conocida #123";
 $ciudad = "Chetumal";
 
 $datos = $nombre ." ". $direccion . " ". $ciudad;

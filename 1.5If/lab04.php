@@ -25,8 +25,8 @@ array (
       $precio = array_column($libros,"precio");
       array_walk_recursive($precio, "listaDePrecios");
     
-      function listaDePrecios($elemento, $indice){
-        echo "$indice". ": ". " <i> $elemento </i> <br>";
+      function listaDePrecios($elemento){
+        echo "precio: ". " <i> $elemento </i> <br>";
     }
 
 ?>

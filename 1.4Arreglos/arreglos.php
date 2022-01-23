@@ -62,12 +62,14 @@
     $herramientas = ["libro","lapiz","laptop",];
     $texto1 = implode("*", $numeros);
     $texto2 = implode("|" , $herramientas );
-        echo $texto2;
-    
+        echo $texto1 ."<br/>";
+        echo $texto2 ."<br/>";
     echo "<br> <br>Ejercicio 1.21 METODO EXPLODE<br>";    
         $arreglo1 = explode("*", $texto1);
         $arreglo2 = explode("|", $texto2);
         print_r ($arreglo1);
+        echo "<br/>";
+        print_r($arreglo2);
 
     echo "<br> <br>Ejercicio 1.22 ARREGLOS ASOCIATIVO DE DOS DIMENSIONES<br>";
     $libros = 
@@ -92,7 +94,10 @@
             )    
           )  ;
 
-    // print_r($libros)
+    print_r($libros);
+    
+    echo "<br/>";
+    
     echo "<br> <br>Ejercicio 1.23 METODO ARRAY_WALK_RECURSIVE<br>";    
     array_walk_recursive($libros, "imprimirArreglo");  //nos apoyamos de la funcion imprimirArrelgos 
 
