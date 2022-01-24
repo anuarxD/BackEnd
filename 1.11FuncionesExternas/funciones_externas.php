@@ -1,32 +1,13 @@
 <?php
 
- //Metodo de Pago
- if (isset($_POST["pago"])) {
 
-    switch ($_POST["pago"]) {
-        case "Visa":
-            $pago = "Visa";
-            break;
-        case "Mastercard":
-            $pago = "Mastercard";
-            break;
-        case "PayPal":
-            $pago = "Paypal";
-            break;
-        case "Ideal":
-            $pago = "Ideal";
-            break;
-        default:
-            $pago =  "Seleccione una forma de Pago";
-            break;
-    }
-}
+
 
 function descuento(){
     $descuento = 0.0;
     if (isset($_POST['estudiante'])) $descuento = $descuento + 15;
     if (isset($_POST['cliente']))  $descuento = $descuento + 10;
-    return ($descuento."%");
+    return ($descuento);
 }
 
 function costoDelServicio($medioDePago){
@@ -52,7 +33,7 @@ function costoDelServicio($medioDePago){
 }
 
 function facturacion(){
-    $pago=0;
+    $apago=0;
     $total = 0;
     echo " <table border='1'>
     <caption>
@@ -86,7 +67,7 @@ function facturacion(){
     }
    
     $descuento = (descuento()/100)*$total;
-    $medioDePago = $pago;
+    $medioDePago = $apago;
     $costoDeServicio = costoDelServicio($medioDePago);
     $aPagar = $total - $descuento + $costoDeServicio;
     echo "<tfoot>

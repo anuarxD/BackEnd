@@ -92,8 +92,29 @@ include_once("../1.11FuncionesExternas/funciones_externas.php");
     </form>
 
     <?php
+ //Metodo de Pago
+ 
+ if (isset($_POST["pago"])) {
 
-    $pago = "";
+    switch ($_POST["pago"]) {
+        case "Visa":
+            $pago = "Visa";
+            break;
+        case "Mastercard":
+            $pago = "Mastercard";
+            break;
+        case "PayPal":
+            $pago = "Paypal";
+            break;
+        case "Ideal":
+            $pago = "Ideal";
+            break;
+        default:
+            $pago =  "Seleccione una forma de Pago";
+            break;
+    }
+}
+    
     $cantidad = 0;
 
     if (isset($_POST["album"][0])) {
@@ -102,11 +123,11 @@ include_once("../1.11FuncionesExternas/funciones_externas.php");
     }
 
    
-
+   
     echo "Discos Ordenados: $cantidad";
     echo "<br>La funcion descuento: " . descuento()."%";
-    echo "<br> El metodo de pago es: $pago";
-    $medioDePago = $pago;
+    echo "<br> El metodo de pago es: ". isset($pago);
+    $medioDePago = isset($pago);
     $costoDeServicio = costoDelServicio($medioDePago);
     echo "<br>El costo del Servicio es de: $ $costoDeServicio <br><br/>";
  
